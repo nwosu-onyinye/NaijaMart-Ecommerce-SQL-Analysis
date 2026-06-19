@@ -1,1 +1,73 @@
+-- =====================================================
+-- NaijaMart E-Commerce Database Schema
+-- Author: Nwosu Onyinyechi
+-- =====================================================
 
+CREATE TABLE customers (
+    customer_id INT PRIMARY KEY,
+    customer_name VARCHAR(100),
+    email VARCHAR(100),
+    gender VARCHAR(10),
+    age INT,
+    state VARCHAR(50),
+    customer_segment VARCHAR(20),
+    registration_date DATE
+);
+
+CREATE TABLE sellers (
+    seller_id INT PRIMARY KEY,
+    seller_name VARCHAR(100),
+    seller_state VARCHAR(50),
+    seller_category VARCHAR(50),
+    seller_rating DECIMAL(2,1)
+);
+
+CREATE TABLE products (
+    product_id INT PRIMARY KEY,
+    product_name VARCHAR(100),
+    category VARCHAR(50),
+    brand VARCHAR(50),
+    seller_id INT,
+    cost_price DECIMAL(12,2),
+    selling_price DECIMAL(12,2),
+    profit_margin DECIMAL(5,2),
+    FOREIGN KEY (seller_id) REFERENCES sellers(seller_id)
+);
+
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    customer_id INT,
+    order_date DATE,
+    payment_method VARCHAR(30),
+    order_status VARCHAR(30),
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+);
+
+CREATE TABLE order_details (
+    detail_id INT PRIMARY KEY,
+    order_id INT,
+    product_id INT,
+    quantity INT,
+    discount_amount DECIMAL(10,2),
+    shipping_cost DECIMAL(10,2),
+    FOREIGN KEY (order_id) REFERENCES orders(order_id),
+    FOREIGN KEY (product_id) REFERENCES products(product_id)
+);
+
+CREATE TABLE deliveries (
+    delivery_id INT PRIMARY KEY,
+    order_id INT,
+    delivery_status VARCHAR(30),
+    delivery_days INT,
+    return_reason VARCHAR(100),
+    FOREIGN KEY (order_id) REFERENCES orders(order_id)
+);
+
+CREATE TABLE customer_reviews (
+    review_id INT PRIMARY KEY,
+    order_id INT,
+    product_rating INT,
+    delivery_rating INT,
+    review_category VARCHAR(50),
+    FOREIGN KEY (order_id) REFERENCES orders(order_id)
+);
