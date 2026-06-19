@@ -66,6 +66,11 @@ The project consists of seven relational tables:
 The analysis revealed that Regular customers generated the highest revenue, contributing approximately ₦5.5 billion in sales.
 
 ![Revenue by Customer Segment](Screenshots/revenue_by_segment.png)
+### Revenue by State
+
+State-level analysis showed that Anambra generated the highest revenue at approximately ₦1.06 billion, followed by Enugu and Kano.
+
+![Revenue by State](Screenshots/revenue_by_state.png)
 
 * Regular customers generated approximately ₦5.5 billion in revenue.
 * Anambra generated the highest state revenue at ₦1.06 billion.
