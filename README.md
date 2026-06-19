@@ -71,6 +71,11 @@ The analysis revealed that Regular customers generated the highest revenue, cont
 State-level analysis showed that Anambra generated the highest revenue at approximately ₦1.06 billion, followed by Enugu and Kano.
 
 ![Revenue by State](Screenshots/revenue_by_state.png)
+### Revenue by Category
+
+Computing emerged as the highest-performing product category, generating approximately ₦1.7 billion in revenue and outperforming Phones and Electronics.
+
+![Revenue by Category](Screenshots/revenue_by_category.png)
 
 * Regular customers generated approximately ₦5.5 billion in revenue.
 * Anambra generated the highest state revenue at ₦1.06 billion.
