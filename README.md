@@ -59,6 +59,13 @@ The project consists of seven relational tables:
 ---
 
 ## Key Insights
+## Sample Analysis
+
+### Revenue by Customer Segment
+
+The analysis revealed that Regular customers generated the highest revenue, contributing approximately ₦5.5 billion in sales.
+
+![Revenue by Customer Segment](Screenshots/revenue_by_segment.png)
 
 * Regular customers generated approximately ₦5.5 billion in revenue.
 * Anambra generated the highest state revenue at ₦1.06 billion.
